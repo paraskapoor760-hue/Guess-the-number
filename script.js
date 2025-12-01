@@ -43,3 +43,14 @@ function checkGuess() {
 window.onload = startGame;
 document.getElementById("submitBtn").addEventListener("click", checkGuess);
 document.getElementById("playAgainBtn").addEventListener("click", startGame);
+// --- Animated Background Parallax Effect ---
+document.addEventListener("mousemove", (event) => {
+    const x = event.clientX / window.innerWidth;
+    const y = event.clientY / window.innerHeight;
+
+    // Moves opposite to cursor
+    const posX = (0.5 - x) * 60; 
+    const posY = (0.5 - y) * 60;
+
+    document.body.style.backgroundPosition = `${posX}px ${posY}px`;
+});
