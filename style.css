@@ -1,19 +1,20 @@
+/* simple page + animated background */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Background */
-    background: radial-gradient(circle at center, #e3f2fd, #90caf9, #42a5f5);
-    background-size: 200% 200%;
-    transition: background-position 0.1s linear;
-
     font-family: Arial, sans-serif;
+
+    /* radial gradient background that we will move using JS */
+    background: radial-gradient(circle at 50% 50%, #e9f6ff 0%, #cfe9ff 40%, #88c7ff 100%);
+    background-size: 200% 200%;
+    background-position: 50% 50%;
+    transition: background-position 0.12s linear; /* keeps it smooth if JS updates directly */
 }
 
-/* Game container – original styling */
+/* Game card (original simple) */
 .game-container {
     background: white;
     padding: 30px;
@@ -23,7 +24,6 @@ body {
     text-align: center;
 }
 
-/* Input */
 input {
     width: 90%;
     padding: 10px;
@@ -31,7 +31,6 @@ input {
     font-size: 16px;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     font-size: 16px;
